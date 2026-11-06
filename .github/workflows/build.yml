@@ -9,12 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.0'
+          flutter-version: '3.16.0'
       - run: flutter pub get
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v3
         with:
-          name: barber-akram-release
+          name: barber-akram-apk
           path: build/app/outputs/flutter-apk/app-release.apk
