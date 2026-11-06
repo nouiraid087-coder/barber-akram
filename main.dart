@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'admin_screen.dart';
 
 void main() {
   runApp(const BarberAkramApp());
@@ -66,6 +67,18 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
           ),
         ),
         centerTitle: true,
+        actions: [
+          // زر سري للانتقال إلى لوحة تحكم الحلاق
+          IconButton(
+            icon: const Icon(Icons.admin_panel_settings, color: Color(0xFFD4AF37)),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AdminScreen()),
+              );
+            },
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
