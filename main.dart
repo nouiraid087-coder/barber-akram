@@ -68,7 +68,6 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
         ),
         centerTitle: true,
         actions: [
-          // زر سري للانتقال إلى لوحة تحكم الحلاق
           IconButton(
             icon: const Icon(Icons.admin_panel_settings, color: Color(0xFFD4AF37)),
             onPressed: () {
